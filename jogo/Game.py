@@ -1,11 +1,14 @@
-from Throw import Throw
+from Execute import Execute
 
-class Game(Throw):
+class Game(Execute):
 	
 	def play(self):
+		self.showTable()
+
 		_input = self.getInput()
 		piece_name = _input[0]
 		positions = _input[1]
+		
 		self.execMove(piece_name, positions)
 		
 
